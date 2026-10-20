@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HintOS</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <main>
+    <h1>HintOS</h1>
+    <p class="intro">Ask an OS question or work through a problem. HintOS explains ideas, follows the conversation, and checks Banker's Algorithm answers.</p>
+    <p id="ai-status" class="ai-status" role="status">Checking local AI...</p>
+    <section id="chat" aria-live="polite"></section>
+    <form id="form">
+      <label for="message">Your question or answer</label>
+      <textarea id="message" rows="3" placeholder="For example: Need matrix: Max=[[7,5,3],[3,2,2]] Allocation=[[0,1,0],[2,0,0]]" required></textarea>
+      <p class="input-help">For a numeric Banker problem, include Available, Max, and Allocation. Press Enter to send; use Shift+Enter for a new line.</p>
+      <button type="submit">Send</button>
+      <button type="button" id="new-question">New question</button>
+    </form>
+    <details>
+      <summary>Recent attempts</summary>
+      <p id="history-empty">Your attempts will appear here.</p>
+      <div id="history"></div>
+    </details>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>

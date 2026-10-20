@@ -1,0 +1,15 @@
+Module 3: Scheduling and Deadlocks
+
+CPU scheduling chooses a ready process or thread to run. A non-preemptive scheduler keeps the CPU until the task blocks or finishes; a preemptive scheduler can take the CPU away. Completion time is when a process finishes. Turnaround = Completion - Arrival. Waiting = Turnaround - CPU burst. Response = First start - Arrival.
+
+FCFS runs in arrival order. SJF chooses the shortest known next CPU burst. Shortest Remaining Time First (SRTF) is the preemptive version of shortest-job scheduling. Priority scheduling chooses by priority and can cause starvation; aging can raise a waiting task's priority. Round Robin gives each task a time quantum and then moves unfinished tasks to the back of the queue. A multilevel queue keeps different classes in separate queues. A multilevel feedback queue can move tasks between queues based on how they use the CPU. Multiprocessor scheduling also considers load balance, processor affinity, and shared or per-CPU run queues.
+
+A deadlock is a group of processes that cannot continue because each waits for a resource held by another. The four Coffman conditions are mutual exclusion, hold and wait, no preemption, and circular wait. A resource-allocation graph uses process and resource nodes with request and assignment edges. Handling options include prevention (break a necessary condition), avoidance (grant only if the state remains safe), detection and recovery, or ignoring the possibility when the cost of handling it is too high.
+
+Deadlock prevention examples include requesting all resources at once, imposing a global order on resource types, or allowing resources to be taken back where safe. A cycle in a single-instance resource graph indicates deadlock; with multiple resource instances, a cycle alone is not enough.
+
+Source links:
+OSTEP CPU scheduling and multilevel feedback queue chapters: https://pages.cs.wisc.edu/~remzi/OSTEP/
+OSTEP multilevel feedback queue: https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-mlfq.pdf
+OSTEP multiprocessor scheduling: https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched-multi.pdf
+OSTEP homework simulators for scheduling: https://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html

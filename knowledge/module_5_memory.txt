@@ -1,0 +1,13 @@
+Module 5: Memory Management
+
+Main memory management tracks which parts of RAM are in use and which process owns them. Contiguous allocation gives a process one continuous region. First fit chooses the first free hole large enough, best fit chooses the smallest suitable hole, and worst fit chooses the largest hole. External fragmentation leaves free memory split into small gaps; compaction can combine gaps but costs time. Paging divides virtual memory and physical memory into equal-sized pages and frames, avoiding external fragmentation but possibly wasting space inside the last page.
+
+Segmentation divides an address space into logical variable-sized parts, such as code, data, and stack. A segment table uses a base and limit to translate an address and check that it is in bounds. Paging and segmentation can be combined.
+
+Virtual memory lets a process use an address space larger or more convenient than installed physical RAM. The memory-management unit translates addresses using page tables, often with a translation lookaside buffer (TLB) caching recent translations. Demand paging loads a page only when it is first accessed. A page fault traps to the OS, which checks whether the address is valid and loads the page if needed.
+
+If no frame is free, a page-replacement policy chooses a page to evict. FIFO chooses the oldest loaded page; LRU chooses the page unused for the longest time; Clock approximates LRU with a reference bit. A working set estimates pages used during a recent time window. If processes need more frames than RAM can provide, they may fault constantly; this is thrashing. The OS can reduce the degree of multiprogramming or allocate frames based on working sets.
+
+Source links:
+OSTEP address spaces, paging, TLBs, and swapping chapters: https://pages.cs.wisc.edu/~remzi/OSTEP/
+OSTEP paging homework simulator: https://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html

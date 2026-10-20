@@ -1,0 +1,14 @@
+Module 1: Introduction to Operating Systems
+
+An operating system (OS) manages hardware resources and provides services that applications use. It controls CPU time, memory, devices, files, and access between programs. Its design balances goals such as performance, reliability, security, portability, and ease of use. Different goals can conflict, so an OS design is a set of tradeoffs.
+
+An abstraction gives a simpler view of a complicated resource. A process is an abstraction of a running program; a file is an abstraction of stored data; virtual memory gives a process its own address space. The OS shares limited resources among programs and protects one program from another.
+
+Common OS structures include monolithic kernels, where many services run in kernel space; layered designs, where services are arranged in levels; modular kernels, which add services through modules; and microkernels, which keep a small core in kernel mode and move more services to separate processes. These designs trade simplicity, performance, isolation, and ease of change differently.
+
+Networking lets systems exchange data. Multimedia work can need steady timing for audio or video. Security controls who can use resources and helps limit damage when software fails or is attacked. These needs affect OS interfaces and resource scheduling.
+
+Source links:
+OSTEP introduction: https://pages.cs.wisc.edu/~remzi/OSTEP/intro.pdf
+OSTEP chapter list: https://pages.cs.wisc.edu/~remzi/OSTEP/
+University OS structure lecture notes: https://www.cs.csustan.edu/~john/Classes/CS3750/Notes/Chap02/02_OpSysStructures.html

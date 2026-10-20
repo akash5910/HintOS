@@ -1,0 +1,8 @@
+CPU scheduling algorithms
+
+First Come First Served (FCFS) runs ready processes in arrival order. It is easy to understand, but a long process at the front can make short processes wait. Shortest Job First (SJF) chooses the job with the shortest CPU burst when the burst is known. Round Robin (RR) gives each ready process a time slice, then moves it to the back of the ready queue if it is not finished.
+
+For a process: Turnaround Time = Completion Time - Arrival Time. Waiting Time = Turnaround Time - Burst Time. Response Time = First Start Time - Arrival Time. For RR, the time slice is also called the quantum. A very large quantum acts more like FCFS; a very small quantum causes more context switches.
+
+Source: Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, chapter 7.
+https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-sched.pdf

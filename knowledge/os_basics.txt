@@ -1,0 +1,11 @@
+Operating Systems basics
+An operating system manages computer hardware and provides services for programs. Common operating system topics include processes, memory management, files, and input and output.
+
+Banker's Algorithm
+The Need matrix shows the resources a process still requires. Calculate Need = Max - Allocation for each process and each resource type. A system is safe if there is an order in which every process can finish with the available resources and resources released by completed processes. To find a safe sequence, find an unfinished process whose Need is less than or equal to Available for every resource. Let it finish, add its Allocation to Available, and repeat. If no process can finish, there is no safe sequence.
+
+CPU scheduling
+In First Come First Served (FCFS), processes run in order of arrival. Completion Time is when a process finishes. Turnaround Time = Completion Time - Arrival Time. Waiting Time = Turnaround Time - Burst Time.
+
+Virtual memory
+Virtual memory gives each process the view of a large address space. The operating system and hardware map virtual addresses to physical memory. In demand paging, a page is loaded into physical memory when it is needed. A page fault occurs when the requested page is not currently in memory. A page table stores mappings from virtual page numbers to physical frame numbers.

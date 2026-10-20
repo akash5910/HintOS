@@ -1,0 +1,18 @@
+Module 2: OS Principles, Processes, and Threads
+
+A system call is the controlled entry from an application into a kernel service, such as creating a process, reading a file, or requesting memory. An API is the interface a programmer calls; a library may translate an API call into one or more system calls. User mode restricts privileged operations. Kernel mode can perform them. A system call, exception, or interrupt transfers control to the kernel through a protected entry point.
+
+An interrupt reports an event that needs attention, often from a device. An exception is caused by the current instruction, for example an invalid memory access. The kernel saves enough state to handle the event and later resume or stop the task.
+
+A process is a running program with its own state and resources. The process control block (PCB) stores information such as process state, program counter, CPU registers, scheduling information, and memory information. Ready processes wait in a ready queue until the scheduler selects one. A context switch saves one process state and restores another.
+
+On Unix-like systems, fork creates a child process, exec replaces a process image with a new program, and wait lets a parent collect a child's completion status. These calls are separate steps and have different jobs.
+
+A thread is an execution path within a process. Threads in one process share code and data, while each thread has its own registers and stack. User-level threads are managed by a library; kernel-level threads are visible to the OS scheduler. Many-to-one, one-to-one, and many-to-many models describe how user threads map to kernel threads.
+
+Source links:
+OSTEP process and process API chapters: https://pages.cs.wisc.edu/~remzi/OSTEP/
+Linux system call list: https://man7.org/linux/man-pages/man2/syscalls.2.html
+Linux fork: https://man7.org/linux/man-pages/man2/fork.2.html
+Linux execve: https://man7.org/linux/man-pages/man2/execve.2.html
+Linux waitpid: https://man7.org/linux/man-pages/man2/waitpid.2.html

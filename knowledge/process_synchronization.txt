@@ -1,0 +1,12 @@
+Process synchronization
+
+When threads access shared data at the same time, their operations can overlap and produce a race condition. The part of the code that reads or changes shared data is called a critical section. A mutex (lock) lets one thread at a time enter a protected critical section. The thread should release the mutex after it finishes using the shared data.
+
+A semaphore is a counter that threads can use to coordinate access to a limited number of resources or signal that an event happened. A condition variable lets a thread sleep until a condition becomes true; it is normally used together with a mutex. A lock should protect the shared state, and a condition variable should be checked in a loop because waking up does not by itself prove that the condition is true.
+
+A deadlock is a situation where tasks wait forever for resources held by one another. A resource-allocation graph can help show which process holds or waits for each resource. For a simple single-instance resource graph, a cycle indicates deadlock. With multiple instances, a cycle alone is not enough to prove deadlock.
+
+Source: Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, chapters 28, 30, and 32.
+https://pages.cs.wisc.edu/~remzi/OSTEP/threads-locks.pdf
+https://pages.cs.wisc.edu/~remzi/OSTEP/threads-sema.pdf
+https://pages.cs.wisc.edu/~remzi/OSTEP/threads-cv.pdf

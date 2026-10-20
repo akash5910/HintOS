@@ -1,0 +1,13 @@
+Module 6: Virtualization and File-System Management
+
+A virtual machine (VM) presents virtual hardware to a guest operating system. A hypervisor, also called a virtual machine monitor, creates and manages VMs. A type 1 hypervisor runs on the hardware; a type 2 hypervisor runs on a host OS. Virtualization can improve isolation and make machines easier to copy or move, but it uses CPU, memory, and storage for the host and guest. Hardware support can reduce some costs, but virtualization is not free.
+
+A container isolates processes while sharing the host kernel. Containers usually start faster and use fewer resources than a full VM, but they do not provide a separate guest kernel. The degree of isolation depends on the OS features and configuration used.
+
+A file-system interface gives programs operations such as create, open, read, write, seek, and close. Directories map names to file information. An inode stores file metadata and references to data blocks; directory entries connect names to inodes. Implementations must track free space and map file offsets to disk blocks. Allocation can use contiguous extents, linked blocks, or indexed structures.
+
+After a crash, recovery aims to restore a consistent file system. Journaling records planned metadata changes so the OS can replay or discard incomplete updates. Soft updates control the order of writes to keep dependencies safe without a full write-ahead journal. A log-structured file system writes new versions sequentially and later reclaims old space. A distributed file system lets clients access files stored on other machines; it must handle caching, naming, network delays, and server failures.
+
+Source links:
+OSTEP virtual machines and file-system chapters: https://pages.cs.wisc.edu/~remzi/OSTEP/
+Docker documentation on containers and VMs: https://docs.docker.com/get-started/docker-concepts/the-basics/what-is-a-container/

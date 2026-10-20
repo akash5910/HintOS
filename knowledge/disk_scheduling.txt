@@ -1,0 +1,8 @@
+Disk scheduling
+
+For a hard disk, seek time is the time needed to move the disk head to a track. Disk scheduling chooses an order for pending requests. FCFS services requests in arrival order. SSTF (Shortest Seek Time First) chooses the request closest to the current head position. SCAN moves the head in one direction and services requests along the way, then reverses direction at the end of the sweep.
+
+To calculate total head movement, write the starting head position followed by the requests in service order. For each move, calculate the absolute difference between the old and new positions. Add all the differences. State whether SCAN reaches the physical end of the disk before reversing, because this changes the total movement.
+
+Source: Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, chapter 37.
+https://pages.cs.wisc.edu/~remzi/OSTEP/file-disks.pdf

@@ -1,0 +1,9 @@
+Paging and virtual memory
+
+Paging divides virtual memory into fixed-size pages and physical memory into same-size frames. A page table maps a virtual page number to a physical frame number. The offset within the page stays the same during translation. A translation lookaside buffer (TLB) is a small cache of recent page-table translations.
+
+A page fault happens when a process uses a virtual page that is not currently in physical memory. The operating system checks whether the access is valid and, if it is, loads the page into a frame. If no free frame exists, a page-replacement policy chooses a page to remove. FIFO removes the page that has been in memory the longest. LRU removes the page that has not been used for the longest time. These policies can be compared by counting page faults for a reference string and a given number of frames.
+
+Source: Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, chapters 18 and 19.
+https://pages.cs.wisc.edu/~remzi/OSTEP/vm-paging.pdf
+https://pages.cs.wisc.edu/~remzi/OSTEP/vm-tlbs.pdf

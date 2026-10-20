@@ -1,0 +1,10 @@
+Files and file systems
+
+A file system stores named data and keeps information needed to find it. A directory maps names to file information. File metadata can include a file's size, type, owner, permissions, and the locations of its data blocks. File contents and file metadata are different things. An inode is a common Unix file-system structure that stores metadata and references to data blocks; the filename is stored in a directory entry that refers to the inode.
+
+An operating system usually gives programs file operations such as open, read, write, and close. A file descriptor is a small handle a process uses to refer to an open file. File systems also need to track which disk blocks are free. Journaling records intended updates so that after a crash the file system can recover to a consistent state.
+
+Source: Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, chapters 39, 40, and 42.
+https://pages.cs.wisc.edu/~remzi/OSTEP/file-intro.pdf
+https://pages.cs.wisc.edu/~remzi/OSTEP/file-implementation.pdf
+https://pages.cs.wisc.edu/~remzi/OSTEP/file-journaling.pdf

@@ -1,0 +1,7 @@
+fastapi
+uvicorn[standard]
+python-multipart
+pypdf
+python-pptx
+sentence-transformers
+faiss-cpu==1.10.0

@@ -1,0 +1,18 @@
+Module 7: Storage, Protection, Security, and Performance
+
+A hard disk stores data on rotating platters; the head moves between tracks, so seek distance and rotation affect access time. SSDs use flash memory and have no moving head, but they still need controllers, wear management, and block-level operations. Storage can be directly attached or reached over a network. RAID combines multiple drives to improve performance, capacity, or fault tolerance, depending on the RAID level.
+
+Disk scheduling orders requests to reduce head movement or improve response time. FCFS keeps arrival order. SSTF picks the nearest request and can starve far requests. SCAN moves in one direction servicing requests, then reverses; C-SCAN services in one direction and jumps back. Total head movement is found by adding the absolute distance for each move. The problem must state the initial direction and whether SCAN goes to the physical end before reversing.
+
+Threats include malicious programs and actions that exploit a system. A virus attaches to a host file or program; a worm spreads between systems; malware is the general term for software intended to cause harm or unauthorized activity. OS defenses include isolation, least privilege, updates, auditing, and limiting the damage a process can do.
+
+A security policy says what access should be allowed. A mechanism enforces that policy. Authentication checks who a user or process is; authorization decides what that identity may do. An access matrix models which subjects can perform which operations on which objects. An access-control list stores permissions with an object; a capability gives a subject a protected token for an object. Both can implement protection, with different management tradeoffs.
+
+Performance analysis looks for bottlenecks using measures such as throughput, response time, CPU utilization, and queue length. Scaling asks how performance changes as processors, memory, users, or workload grow. Mobile OS design also considers power use, radio and sensor access, app isolation, responsiveness, and limited resources.
+
+Source links:
+OSTEP storage and security chapters: https://pages.cs.wisc.edu/~remzi/OSTEP/
+OSTEP disk and file-system homework: https://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html
+OSTEP authentication and access control: https://pages.cs.wisc.edu/~remzi/OSTEP/security-authentication.pdf
+OSTEP access control: https://pages.cs.wisc.edu/~remzi/OSTEP/security-access.pdf
+NIST malware glossary: https://csrc.nist.gov/glossary/term/malware

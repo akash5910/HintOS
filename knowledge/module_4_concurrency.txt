@@ -1,0 +1,13 @@
+Module 4: Concurrency, Synchronization, and IPC
+
+Concurrent tasks can interleave. If the result depends on the timing of operations on shared data, there may be a race condition. A critical section is code that accesses shared state. Correct synchronization aims for mutual exclusion, progress, and bounded waiting, while avoiding deadlock and unnecessary delay.
+
+A mutex protects a critical section by allowing one owner at a time. A spinlock repeatedly checks until it can acquire a lock, which can work for very short waits on multiprocessors but wastes CPU time during long waits. Atomic instructions such as test-and-set or compare-and-swap can implement locks. Scalable locks reduce contention by avoiding a single heavily shared location. Lock-free algorithms use atomic operations so that system-wide progress is possible even when one thread is delayed.
+
+A semaphore is an integer-like synchronization tool changed using atomic wait and signal operations. A counting semaphore can track several identical resources; a binary semaphore can coordinate one-at-a-time access. Classical exercises include producer-consumer, readers-writers, and dining philosophers. A monitor groups shared state with procedures that control access. Condition variables let a thread wait for a condition while releasing the monitor lock, then recheck the condition after waking.
+
+IPC (interprocess communication) lets processes exchange data or coordinate. Unix examples include pipes, named pipes, signals, shared memory, and sockets. Shared memory is fast after setup but needs synchronization. Message passing provides a communication boundary and can simplify protection.
+
+Source links:
+OSTEP concurrency chapters on locks, condition variables, semaphores, and monitors: https://pages.cs.wisc.edu/~remzi/OSTEP/
+OSTEP homework and concurrency simulators: https://pages.cs.wisc.edu/~remzi/OSTEP/Homework/homework.html

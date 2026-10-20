@@ -1,0 +1,9 @@
+Processes and threads
+
+A program is a file with instructions. A process is a running instance of a program. The operating system keeps information for each process, including its current state, memory, and saved CPU registers. A process can be running, ready to run, or blocked while it waits for an event such as input or disk I/O.
+
+A context switch happens when the operating system stops one process or thread and lets another run. It saves the current CPU state, chooses a ready task, and restores that task's state. A thread is an execution path inside a process. Threads in the same process share its address space, so they can share data, but they need synchronization when accessing shared data at the same time.
+
+Source: Remzi H. Arpaci-Dusseau and Andrea C. Arpaci-Dusseau, Operating Systems: Three Easy Pieces, chapters 4 and 26.
+https://pages.cs.wisc.edu/~remzi/OSTEP/cpu-intro.pdf
+https://pages.cs.wisc.edu/~remzi/OSTEP/threads-intro.pdf
